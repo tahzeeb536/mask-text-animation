@@ -14,6 +14,20 @@ body {
   font-family: Montserrat, sans-serif;
 }
 
+svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 98;
+  stroke-dashoffset: 1000px;
+  stroke-dasharray: 1000px;
+}
+
+.animate {
+  animation: animation 10s cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+
 #circle {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -47,7 +61,7 @@ body {
 
 #wrapper h1 {
   color: #fff;
-  font-size: 600px;
+  font-size: 700px;
   font-weight: 900;
 }
 
@@ -116,4 +130,11 @@ body {
   letter-spacing: 15px;
   transform: rotate(-90deg
   );
+}
+
+
+@keyframes animation {
+  to {
+    stroke-dasharray: 450px;
+  }
 }
